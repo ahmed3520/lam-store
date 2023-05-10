@@ -1,0 +1,82 @@
+.animate {
+  display: flex;
+  align-items: center;
+}
+.voice-record .wave {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.voice-record .wave span {
+  display: block;
+  width: 4px;
+  height: 100%;
+  border-radius: 4px;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.voice-record .wave:nth-child(1) span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.voice-record .wave:nth-child(1) span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.voice-record .wave:nth-child(1) span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.voice-record .wave:nth-child(2) span:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.voice-record .wave:nth-child(2) span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.voice-record .wave:nth-child(2) span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.voice-record .wave:nth-child(3) span:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.voice-record .wave:nth-child(3) span:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.voice-record .wave:nth-child(3) span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes wave {
+  0%,
+  60%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  30% {
+    transform: scaleY(1);
+  }
+}
+
+.voice-record .wave {
+  width: 100%;
+  height: 33.333%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voice-record .wave span {
+  display: block;
+  width: 2px;
+  height: 20px;
+  border-radius: 2px;
+  animation: wave 1s ease-in-out infinite;
+  background-color: #fff;
+}
