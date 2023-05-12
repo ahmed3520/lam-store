@@ -1,0 +1,43 @@
+.main-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 100%;
+  background-color: #1e2023;
+  z-index: 999;
+}
+
+.main-sidebar-wr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.icon-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+span {
+  font-size: 12px;
+  margin-top: 10px;
+}
+.icon-wrapper svg path {
+  fill: rgb(138, 136, 136) !important;
+}
+.icon-wrapper span {
+  color: rgb(138, 136, 136) !important;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 24px;
+}
+.btn-click {
+  cursor: pointer;
+}

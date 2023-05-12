@@ -5,6 +5,7 @@ import Sidebar from "./components/SideBar";
 import ChatInterface from "./chat/Chat";
 import ChatInterfaceRouter from "./routers/ChatInterface";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Mainsidebar from "./components/Mainsidebar";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -13,9 +14,12 @@ const router = createBrowserRouter([
 ]);
 function App() {
   return (
-    <div className="wrapper">
-      <RouterProvider router={router} />
-    </div>
+    <>
+      <div className="wrapper">
+        <RouterProvider router={router} />
+      </div>
+      <Mainsidebar />
+    </>
   );
 }
 

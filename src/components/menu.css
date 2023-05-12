@@ -1,0 +1,51 @@
+.sidebar {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 300px;
+  background-color: #1e2023;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user h3 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.tabs {
+  padding: 20px;
+}
+
+.tabs ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

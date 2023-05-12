@@ -6,7 +6,9 @@
 .hidden-sidebar {
   display: none;
 }
-
+.btn-click {
+  cursor: pointer;
+}
 .header {
   position: fixed;
   left: 0;

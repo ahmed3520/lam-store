@@ -4,7 +4,7 @@ import Sidebar from "../components/SideBar";
 const ChatInterfaceRouter = () => {
   return (
     <>
-      <Sidebar messages={[]}></Sidebar>
+      {/* <Sidebar messages={[]}></Sidebar>*/}
       <ChatInterface />
     </>
   );

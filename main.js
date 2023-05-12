@@ -1,6 +1,6 @@
 const path = require("path");
 
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 const ENV = "dev";
 function createWindow() {
   // Create the browser window.
@@ -9,6 +9,9 @@ function createWindow() {
     height: 1200,
     minWidth: 800, // minimum width of the window
     minHeight: 600, // minimum height of the window
+    webPreferences: {
+      nodeIntegration: true,
+    },
   });
   // and load the index.html of the app.
   if (ENV === "dev") {
@@ -27,6 +30,7 @@ function createWindow() {
   } else {
     throw new Error("wrong env");
   }
+  Menu.setApplicationMenu(null);
   mainWindow.setMinimumSize(1000, 300);
   mainWindow.webContents.openDevTools();
 }
