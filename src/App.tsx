@@ -4,21 +4,29 @@ import "./App.css";
 import Sidebar from "./components/SideBar";
 import ChatInterface from "./chat/Chat";
 import ChatInterfaceRouter from "./routers/ChatInterface";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  Routes,
+  Route,
+  useParams,
+  Link,
+  Outlet,
+  BrowserRouter as Router,
+} from "react-router-dom";
 import Mainsidebar from "./components/Mainsidebar";
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <ChatInterfaceRouter />,
-  },
-]);
+import ErrorPage from "./components/error-page";
+import Store from "./pages/store";
+
 function App() {
   return (
     <>
       <div className="wrapper">
-        <RouterProvider router={router} />
+        <Routes>
+          <Route path="/" element={<ChatInterface />} />
+          <Route path="/store" element={<Store />} />
+        </Routes>
+
+        <Mainsidebar />
       </div>
-      <Mainsidebar />
     </>
   );
 }

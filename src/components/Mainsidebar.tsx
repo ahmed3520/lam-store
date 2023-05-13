@@ -2,9 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { ReactComponent as Burger } from "../assets/burger.svg";
 import { ReactComponent as Store } from "../assets/store.svg";
 import { ReactComponent as Apps } from "../assets/apps.svg";
-import "./mainsidebar.css";
-import MenuSidebar from "./Menu";
+import { ReactComponent as Home } from "../assets/home.svg";
 
+import "./css/mainsidebar.css";
+import MenuSidebar from "./Menu";
+import { Link } from "react-router-dom";
 const Mainsidebar = () => {
   const sidebarTriggerRef = useRef(null);
   const sidebarRef = useRef(null);
@@ -45,10 +47,18 @@ const Mainsidebar = () => {
         >
           <Burger />
         </div>
-        <div className="icon-wrapper">
-          <Store />
-          <span>Store</span>
-        </div>
+        <Link to={"/"}>
+          <div className="icon-wrapper">
+            <Home />
+            <span>Home</span>
+          </div>
+        </Link>
+        <Link to={"/store"}>
+          <div className="icon-wrapper">
+            <Store />
+            <span>Store</span>
+          </div>
+        </Link>
         <div className="icon-wrapper">
           <Apps />
           <span>Apps</span>

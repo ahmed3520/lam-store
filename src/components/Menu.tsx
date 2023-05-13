@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import "./menu.css";
+import "./css/menu.css";
 
 interface SidebarProps {
   showSidebar: boolean;

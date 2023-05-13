@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./sidebar.css";
+import "./css/sidebar.css";
 import { ReactComponent as Bar } from "../assets/bar.svg";
 
 type Props = {
