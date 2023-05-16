@@ -6,6 +6,7 @@ import { ReactComponent as SendIcon } from "../assets/send.svg";
 import MicIcon from "../assets/Mic_duotone.svg";
 import UploadIcon from "../assets/upload.svg";
 import VoiceRecorderButton from "./VoiceRecorder";
+import { getUserResponse } from "./mainAgent";
 function ChatInterface() {
   const webcamRef = useRef<Webcam>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -31,9 +32,10 @@ function ChatInterface() {
     setShowModal(false);
   };
 
-  const handleSendMessage = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSendMessage = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     if (!inputValue) return;
+
     const newMessage = {
       text: inputValue,
       sender: "user",
@@ -42,6 +44,17 @@ function ChatInterface() {
     setMessages([...messages, newMessage]);
     setInputValue("");
     messageInputRef.current?.focus();
+
+    // Call getUserResponse function with the user's message
+    const response = await getUserResponse(inputValue);
+
+    // Add the response to the messages state
+    const responseMessage = {
+      text: response.response,
+      sender: "agent",
+      timestamp: new Date().toISOString(),
+    };
+    setMessages((prevMessages) => [...prevMessages, responseMessage]);
   };
 
   const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {

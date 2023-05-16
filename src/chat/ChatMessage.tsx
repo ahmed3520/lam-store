@@ -16,7 +16,7 @@ function ChatMessages({ messages }: ChatMessagesProps) {
   return (
     <div className="chat-window">
       {messages.map((message, index) => (
-        <div key={index} className={`message ${message.sender}`}>
+        <div key={index} className={`chat-message ${message.sender}`}>
           {message.audio ? (
             <div className="message-audio">
               <AudioPlayer src={URL.createObjectURL(message.audio)} />

@@ -11,7 +11,10 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
+  width: 92%;
   padding: 20px;
+  overflow-y: scroll;
+  scrollbar-color: rgb(26, 27, 30) rgb(43, 45, 49);
 }
 
 .message {
@@ -61,4 +64,27 @@
 
 .message.sender2 {
   align-self: flex-end;
+}
+.chat-message {
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.chat-message.user {
+  /* Add styles specific to user messages here */
+  background-color: #3a3c3f;
+  color: #fff;
+  align-self: flex-end;
+  font-family: "Google Sans", sans-serif;
+}
+
+.chat-message.agent {
+  /* Add styles specific to agent messages here */
+  background-color: #1f2123;
+  color: #fff;
+  align-self: flex-start;
+  font-family: "Google Sans", sans-serif;
 }

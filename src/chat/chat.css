@@ -58,12 +58,15 @@ body {
   display: flex;
   border: 1px solid rgba(0, 0, 0, 0.16);
   border-radius: 18px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .text-wr {
   align-items: center;
   display: flex;
   justify-content: center;
   width: 100%;
+  font-family: "Google Sans", sans-serif;
 }
 .message-input {
   display: flex;
@@ -171,6 +174,7 @@ body {
 }
 .chat-footer {
   background-color: #2e3033;
+  margin-left: 80px;
 }
 
 @keyframes pulse {

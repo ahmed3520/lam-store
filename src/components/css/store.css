@@ -67,7 +67,10 @@
   justify-content: center;
   margin-bottom: 20px;
 }
-
+.header-cont-text h2 {
+  color: #bdbdbd;
+  font-family: "Google Sans", sans-serif;
+}
 .app-search {
   display: flex;
   align-items: center;

@@ -15,12 +15,11 @@
   visibility: visible;
 }
 
-.user {
+/*.user {
   display: flex;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #eee;
-}
+}*/
 
 .user img {
   width: 50px;

@@ -1,0 +1,25 @@
+{
+    "schema_version":"v1",
+    "name_for_model":"alarm",
+    "name_for_human":"Dummy Alarm",
+    "description_for_human":"Simple Alert that beep when alarm finish",
+    "description_for_model":"Use this app when user ask you to set an alarm. this app takes HH:MM as arguments",
+    "entry_functions":[
+       {
+          "function_name":"set_alarm",
+          "arguments":[
+             {
+                "name":"time",
+                "type":"string",
+                "description":"The time to set the alarm for in HH:MM format"
+             }
+          ]
+       }
+    ],
+    "auth":{
+       "type":"none"
+    },
+    "logo_url":"https://oneword.domains/logo.png",
+    "contact_email":"info@oneword.domains",
+    "legal_info_url":"https://oneword.domains/legal"
+ }
