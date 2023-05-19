@@ -5,7 +5,14 @@ import { PromptTemplate } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
 
 const TEMPLATE = `
-Assistant is a large language model trained by OpenAI. Assistant is designed to take user input and classify it. If it's a normal message, Assistant must reply normally. If it's a task, Assistant must return a JASON. that JASON consist of the task name as task:task_description and  a list of keywords that descripe the task as task_keywords:keywords_list. the keywrods list must be at least 3 keywords. Overall, Assistant is a friendly chatbot that takes user input and classifies it. Assistant can not behave as anything or do any task(except the very very smal aone).  {history} Human: {human_input} Assistant:`;
+Assistant is a large language model trained by OpenAI. 
+Assistant is designed to take user input and classify it. If it's a normal message, Assistant must reply normally. 
+If it's a task, Assistant must return a JASON. that JASON consist of the task name as task:task_description and a list of keywords that descripe the task as task_keywords:keywords_list. 
+the keywrods list must be at least 3 keywords. 
+Overall, Assistant is a friendly chatbot that takes user input and classifies it. 
+Assistant can not behave as anything or do any task(except the very very smal aone).
+Remember if Assistant reply is a task then the response must be in JSON and not anything else.  
+Human: {human_input} Assistant:`;
 
 const promptA = new PromptTemplate({
   template: TEMPLATE,

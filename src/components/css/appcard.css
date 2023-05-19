@@ -1,0 +1,33 @@
+.app-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: rgb(34 35 38);
+}
+
+.app-card-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.app-card-name {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.app-card-name {
+  color: #bdbdbd;
+  font-family: "Google Sans", sans-serif;
+  font-size: 16px;
+}
+.app-card-description {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bdbdbd;
+  text-align: center;
+}

@@ -13,16 +13,15 @@ export async function matchApp(userTask: string, keywords: string[]) {
 
   let filteredApps = filterApps(apps, keywords);
   console.log(filteredApps); // [{name_of_app: "Alarmy", description_of_app: "Wake up on time with this alarm app"}]
+  if (filteredApps.length <= 0) {
+    return {};
+  }
   const prompt = `
-  Assistant is a large language model trained by openAI. 
-  Assistant is designed to take user task and list of apps and calculate the probability of the match between user task and every app. 
-  Assistant can not behave as anything or think. your role is just calculate the probability of the matching between user input and the list of apps.
-  Assistant responce must be in json like {app_name:probability}  
-  ${JSON.stringify(filteredApps)} Human: ${userTask}. Assistant:;
+  Assistant is a large language model trained by OpenAI. Your task is to calculate the probability of a match between a user's request and a given list of apps. You should not behave as anything or think beyond this specific task. When given a user's request and a list of apps, return a JSON response with the app name and its probability of being a match. If the user provides an empty array of apps, you must return an empty JSON object. Your response should always be in JSON format and should not include any other information.
+  apps: ${JSON.stringify(filteredApps)}. Human: ${userTask}. Assistant:
   `;
   console.log("prompt", prompt);
   const response = await openAIModel.call(prompt);
-  console.log("app's classification:", response);
   /* let bestMatch: App | undefined;
   let bestScore = 0;
   for (const app of apps) {
@@ -32,7 +31,7 @@ export async function matchApp(userTask: string, keywords: string[]) {
       bestScore = score;
     }
   }*/
-  return response;
+  return { response, apps };
 }
 
 function calculateScore(app: App, response: any): number {

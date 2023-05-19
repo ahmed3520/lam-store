@@ -1,7 +1,7 @@
 import React from "react";
-import "./css/store.css";
-import { ReactComponent as SearchIcon } from "../assets/search.svg";
-
+import "../css/store.css";
+import { ReactComponent as SearchIcon } from "../../assets/search.svg";
+import StoreApps from "./StoreApps";
 const Store = () => {
   return (
     <div className="store">
@@ -20,6 +20,7 @@ const Store = () => {
             </div>
           </div>
         </div>
+        <StoreApps />
       </div>
     </div>
   );
