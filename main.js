@@ -11,6 +11,8 @@ function createWindow() {
     minHeight: 600, // minimum height of the window
     webPreferences: {
       nodeIntegration: true,
+      contextIsolation: false,
+      preload: path.join(__dirname, "preload.js"),
     },
   });
   // and load the index.html of the app.

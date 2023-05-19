@@ -1,6 +1,10 @@
-const runExternalApp = require("./externalAppRunner");
+import runExternalApp from "./externalAppRunner";
 
-async function executeExternalApp(appPath, operation, ...args) {
+async function executeExternalApp(
+  appPath: string,
+  operation: string,
+  ...args: string[]
+): Promise<string> {
   try {
     const result = await runExternalApp(appPath, operation, ...args);
     console.log(`Result from external app: ${result}`);
@@ -10,4 +14,5 @@ async function executeExternalApp(appPath, operation, ...args) {
     throw error;
   }
 }
-module.exports = executeExternalApp;
+
+export default executeExternalApp;

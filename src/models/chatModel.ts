@@ -5,7 +5,6 @@ import { PromptTemplate } from "langchain/prompts";
 import { MemoryVectorStore } from "langchain/vectorstores/memory";
 import { HuggingFaceInferenceEmbeddings } from "langchain/embeddings/hf";
 import { initializeAgentExecutorWithOptions } from "langchain/agents";
-import { HuggingFaceModel } from ".";
 import { ChainTool } from "langchain/tools";
 import { SerpAPI } from "langchain/tools";
 import { Calculator } from "langchain/tools/calculator";
@@ -36,7 +35,7 @@ const memoryChain = new ChainTool({
   chain: chain,
 });
 const tools = [memoryChain];
-async function name(message: String) {
+/*async function name(message: String) {
   const executor = await initializeAgentExecutorWithOptions(
     tools,
     HuggingFaceModel,
@@ -46,5 +45,5 @@ async function name(message: String) {
     }
   );
 }
-
+*/
 console.log("Loaded agent.");

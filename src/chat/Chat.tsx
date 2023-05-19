@@ -7,6 +7,7 @@ import MicIcon from "../assets/Mic_duotone.svg";
 import UploadIcon from "../assets/upload.svg";
 import VoiceRecorderButton from "./VoiceRecorder";
 import { getUserResponse } from "./mainAgent";
+import { matchApp } from "../utils/matchTaskWithapp";
 function ChatInterface() {
   const webcamRef = useRef<Webcam>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -54,6 +55,23 @@ function ChatInterface() {
       sender: "agent",
       timestamp: new Date().toISOString(),
     };
+    function isJSON(str: string) {
+      try {
+        JSON.parse(str);
+      } catch (e) {
+        return false;
+      }
+      return true;
+    }
+    if (isJSON(responseMessage.text)) {
+      let input_json = JSON.parse(responseMessage.text);
+      let task = input_json["task"];
+      let task_description = input_json["task_description"];
+      let task_keywords = input_json["task_keywords"];
+      console.log(task, task_description, task_keywords);
+      const res = matchApp(task, task_keywords);
+      console.log("match app=>", res);
+    }
     setMessages((prevMessages) => [...prevMessages, responseMessage]);
   };
 
@@ -81,7 +99,6 @@ function ChatInterface() {
     }
   }, [transcription, lastTranscription]);
 
-  console.log("transcription", transcription);
   return (
     <div className="chat-interface">
       <div className="cont">
