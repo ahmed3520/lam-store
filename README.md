@@ -1,6 +1,6 @@
 # Lam-store
 
-The Lam-store is a versatile and powerful desktop application built with Electron and React, allowing users to perform various tasks through a single, centralized platform. Users can install and use different apps within the main app, which is powered by a chat interface (currently using ChatGPT). The supported apps can be developed in multiple programming languages, such as Node.js, Python, and others. Each app should include a binary file, a manifest JSON, a logo, and any additional assets that may be required. The All-in-One App utilizes Node.js child processes for efficient communication with the installed apps, ensuring seamless integration and a smooth user experience.
+The Lam-store is a versatile and powerful desktop application built with Electron and React, allowing users to perform various tasks through a single, centralized platform. Users can install and use different apps within the main app, which is powered by a chat interface (currently using ChatGPT). The supported apps can be developed in multiple programming languages, such as Node.js, Python, and others. Each app should include a binary file, a manifest JSON, a logo, and any additional assets that may be required. The lam-store App utilizes Node.js child processes for efficient communication with the installed apps, ensuring seamless integration and a smooth user experience.
 
 ## Table of Contents
 
@@ -20,11 +20,11 @@ The Lam-store is a versatile and powerful desktop application built with Electro
 
 ## Getting Started <a id="getting-started"></a>
 
-These instructions will provide you with a copy of the project and help you set up your environment to run the All-in-One App.
+These instructions will provide you with a copy of the project and help you set up your environment to run the lam-store App.
 
 ### Prerequisites <a id="prerequisites"></a>
 
-- Node.js (>= 14.x.x)
+- Node.js (>= 18.x.x)
 
 - Python (>= 3.8.x)
 
@@ -35,11 +35,11 @@ These instructions will provide you with a copy of the project and help you set 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/all-in-one-app.git
+git clone https://github.com/ahmed3520/lam-store
 ```
 2. Navigate to the project directory:
 ```
-cd all-in-one-app
+cd lam-store
 ```
 3. Install the required dependencies
 ```
@@ -63,13 +63,13 @@ When a user interacts with the chat interface, their input is passed to ChatGPT,
 }
 ```
 
-The All-in-One App then filters the available apps list using the keywords provided by ChatGPT. The filtered app list and the task are sent back to ChatGPT to calculate the probability of the best app that fits the user's task.
+The lam-store App then filters the available apps list using the keywords provided by ChatGPT. The filtered app list and the task are sent back to ChatGPT to calculate the probability of the best app that fits the user's task.
 
 Once the best app is identified, it is retrieved from the apps directory, and the task and arguments are passed to a child process file. This child process file interacts with the app, processes the user's request, and returns the output, which is displayed in the chat interface.
 
 This modular design enables developers to create and integrate new apps easily, while users can enjoy a unified experience across multiple apps without needing to switch between different platforms.
 ## Current Challenges & Future Work <a id="current-challenges"></a>
-As the All-in-One App project continues to evolve, we are actively working on addressing the following challenges and improvements:
+As the lam-store App project continues to evolve, we are actively working on addressing the following challenges and improvements:
 
 1.  **Argument Extraction**: Developing a method to extract arguments from user tasks and pass them to the appropriate app for processing.
     
@@ -80,11 +80,11 @@ As the All-in-One App project continues to evolve, we are actively working on ad
 4.  **User Interface Enhancements**: Continuously improving the user interface to support additional input types, such as voice, photos, videos, and files.
     
 
-We are committed to addressing these challenges and enhancing the All-in-One App's capabilities. We welcome feedback and contributions from the community to help us achieve our goals and create a better user experience.
+We are committed to addressing these challenges and enhancing the lam-store App's capabilities. We welcome feedback and contributions from the community to help us achieve our goals and create a better user experience.
 ## Usage <a id="usage"></a>
 After setting up the  App, users can access the main chat interface to interact with the installed apps. To install new apps, follow the app installation process provided by each individual app.
 ## App Development <a id="app-development"></a>
-Developers can create apps for the All-in-One App using various programming languages. Each app must follow the required app structure and include necessary files.
+Developers can create apps for the lam-store App using various programming languages. Each app must follow the required app structure and include necessary files.
 ### App Structure  <a id="app-structure"></a>
 An app should include the following files:
 -   Executable binary file (e.g., .exe or any other supported language)
