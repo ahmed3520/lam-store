@@ -17,6 +17,7 @@ The Lam-store is a versatile and powerful desktop application built with Electro
     - [Manifest JSON ](#manifest-json-)
   - [Contributing ](#contributing-)
   - [License ](#license-)
+  - [Contact](#contact)
 
 ## Getting Started <a id="getting-started"></a>
 
@@ -35,7 +36,7 @@ These instructions will provide you with a copy of the project and help you set 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ahmed3520/lam-store
+git clone https://github.com/ahmed3520/lam-store.git
 ```
 2. Navigate to the project directory:
 ```
@@ -71,13 +72,13 @@ This modular design enables developers to create and integrate new apps easily, 
 ## Current Challenges & Future Work <a id="current-challenges"></a>
 As the lam-store App project continues to evolve, we are actively working on addressing the following challenges and improvements:
 
-1.  **Argument Extraction**: Developing a method to extract arguments from user tasks and pass them to the appropriate app for processing.
-    
-2.  **App Selection Algorithm**: Improving the app selection algorithm to increase efficiency and reduce the reliance on large language models (LLMs) for determining the best app to handle a user's task.
-    
-3.  **Developer Platform**: Creating a platform for developers to upload their apps, store them in cloud storage, and allow users to download the apps (including the binary file and the manifest.json).
-    
-4.  **User Interface Enhancements**: Continuously improving the user interface to support additional input types, such as voice, photos, videos, and files.
+  1.  **Argument Extraction**: Developing a method to extract arguments from user tasks and pass them to the appropriate app for processing.
+      
+  2.  **App Selection Algorithm**: Improving the app selection algorithm to increase efficiency and reduce the reliance on large language models (LLMs) for determining the best app to handle a user's task.
+      
+  3.  **Developer Platform**: Creating a platform for developers to upload their apps, store them in cloud storage, and allow users to download the apps (including the binary file and the manifest.json).
+      
+  4.  **User Interface Enhancements**: Continuously improving the user interface to support additional input types, such as voice, photos, videos, and files.
     
 
 We are committed to addressing these challenges and enhancing the lam-store App's capabilities. We welcome feedback and contributions from the community to help us achieve our goals and create a better user experience.
@@ -124,14 +125,18 @@ The manifest JSON should contain relevant metadata for the app, such as:
 
 ## Contributing <a id="contributing"></a>
 
-We welcome and appreciate contributions from the community. To contribute:
+Contributions are always welcome!
 
-1.  Fork the repository.
-2.  Create a new branch with a descriptive name.
-3.  Make your changes and commit them with a meaningful commit message.
-4.  Push your changes to your fork.
-5.  Create a pull request with a detailed description of the changes.
+See `contributing.md` for ways to get started.
+
+Please adhere to this project's `code of conduct`.
+
 
 ## License <a id="license"></a>
 
 This project is licensed under the **Apache** License. See LICENSE for more information.
+
+
+## Contact
+
+If you have any questions, feel free to reach out to Ahmed on [Twitter](https://twitter.com/ataha3520) or by [Email](mailto:a.tahamostafa@outlook.com).
