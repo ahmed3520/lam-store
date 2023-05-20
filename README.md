@@ -39,16 +39,15 @@ These instructions will provide you with a copy of the project and help you set 
 git clone https://github.com/ahmed3520/lam-store.git
 ```
 2. Navigate to the project directory:
-```
+```bash
 cd lam-store
 ```
 3. Install the required dependencies
-```
+```bash
 npm install
-pip install -r requirements.txt
 ```
 4. Run the application:
-```
+```bash
 npm start
 ```
 ## How It Works <a id="how-it-works"></a>
