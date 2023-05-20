@@ -24,7 +24,7 @@ These instructions will provide you with a copy of the project and help you set 
 
 ### Prerequisites <a id="prerequisites"></a>
 
-- Node.js (>= 18.x.x)
+- Node.js (>= 14.x.x)
 
 - Python (>= 3.8.x)
 
@@ -35,20 +35,20 @@ These instructions will provide you with a copy of the project and help you set 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ahmed3520/lam-store
+git clone https://github.com/your-username/all-in-one-app.git
 ```
 2. Navigate to the project directory:
 ```
-cd lam-store
+cd all-in-one-app
 ```
 3. Install the required dependencies
 ```
 npm install
+pip install -r requirements.txt
 ```
 4. Run the application:
 ```
 npm start
-npm start-forge
 ```
 ## How It Works <a id="how-it-works"></a>
 
@@ -134,4 +134,4 @@ We welcome and appreciate contributions from the community. To contribute:
 
 ## License <a id="license"></a>
 
-This project is licensed under the MIT License. See LICENSE for more information.
+This project is licensed under the **Apache** License. See LICENSE for more information.
